@@ -16,6 +16,17 @@ android {
         versionName = "1.0"
     }
 
+    // Исправление Java 1.8 -> Java 17
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    // Kotlin тоже использует Java 17
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     buildFeatures {
         compose = true
     }
